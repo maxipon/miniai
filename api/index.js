@@ -4,8 +4,6 @@ const port = 3000;
 
 const summarizeText = require('./summarize.js');
 
-const txt2img = require('./txt2img.js');
-
 // Parses JSON bodies (as sent by API clients)
 app.use(express.json());
 
