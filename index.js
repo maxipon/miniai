@@ -39,6 +39,10 @@ app.post('/txt2img', (req, res) => {
     });
 });
 
+app.get('/', (req, res) => {
+  res.sendFile('index.html', { root: 'public' });
+});
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);
