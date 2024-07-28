@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-const summarizeText = require('../summarize.js');
+const summarizeText = require('./summarize.js');
 
 // Parses JSON bodies (as sent by API clients)
 app.use(express.json());
@@ -45,5 +45,3 @@ app.listen(port, () => {
 });
 
 module.exports = app;
-
-export default app;
