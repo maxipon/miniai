@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const path = require('path')
 
 const summarizeText = require('./summarize.js');
 
@@ -8,6 +9,10 @@ app.use(express.json());
 
 // Serves static files from the 'public' directory
 app.use(express.static('public'));
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 // Handle POST requests to the '/summarize' endpoint
 app.post('/summarize', (req, res) => {
