@@ -6,10 +6,6 @@ async function summarizeText(text) {
   // INSERT CODE SNIPPET FROM POSTMAN BELOW
   let data = JSON.stringify({
     "inputs": text,  // <-- use the text passed into the function
-    "parameters": {
-      "max_length": 100,
-      "min_length": 30
-    }
   });
 
   let config = {
