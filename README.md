@@ -14,7 +14,7 @@ These applications are designed to save time and effort. The AI Text Summarizer 
    - Paste your text into the provided area.
    - Click the "Submit" button to receive a concise summary.
 
-2. **Text2Img App**:
+2. **Text2Img**:
    - Enter your text description.
    - Click "Generate" to create an image.
 
