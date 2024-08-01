@@ -10,8 +10,8 @@ These applications are designed to save time and effort. The AI Text Summarizer 
 
 ## Quick Start
 
-1. **AI Text Summarizer**: 
-   - Paste your text into the provided area (between 200 and 10000 word!)
+1. **Text Summarizer**: 
+   - Paste your text into the provided area (between 200 and 10000 words!)
    - Click the "Submit" button to receive a concise summary.
 
 2. **Text2Img**:
@@ -27,4 +27,4 @@ These applications are designed to save time and effort. The AI Text Summarizer 
 
 ## Contributing
 
-You don't.
+- You don't.
