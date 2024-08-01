@@ -53,8 +53,9 @@ function submitData(e) {
 
   const text_to_summarize = textArea.value;
 
-  var myHeaders = new Headers();
+  const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
+  myHeaders.append('Authorization', 'Bearer ' + process.env['ACCESS_TOKEN']);
 
   var raw = JSON.stringify({
     "text_to_summarize": text_to_summarize
@@ -69,8 +70,9 @@ function submitData(e) {
 
   // Send the text to the server using fetch API
 
+  const summarize = "https://api-inference.huggingface.co/models/facebook/bart-large-cnn";
   // Note - here we can omit the “baseUrl” we needed in Postman and just use a relative path to “/summarize” because we will be calling the API from our Replit!  
-  fetch('/summarize', requestOptions)
+  fetch(summarize, requestOptions)
     .then(response => response.text()) // Response will be summarized text
     .then(summary => {
       // Do something with the summary response from the back end API!
