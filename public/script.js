@@ -69,9 +69,8 @@ function submitData(e) {
 
   // Send the text to the server using fetch API
 
-  const summarize = "https://api-inference.huggingface.co/models/facebook/bart-large-cnn";
   // Note - here we can omit the “baseUrl” we needed in Postman and just use a relative path to “/summarize” because we will be calling the API from our Replit!  
-  fetch(summarize, requestOptions)
+  fetch("/summarize", requestOptions)
     .then(response => response.text()) // Response will be summarized text
     .then(summary => {
       // Do something with the summary response from the back end API!
