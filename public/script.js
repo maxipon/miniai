@@ -55,7 +55,6 @@ function submitData(e) {
 
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
-  myHeaders.append('Authorization', 'Bearer ' + process.env['ACCESS_TOKEN']);
 
   var raw = JSON.stringify({
     "text_to_summarize": text_to_summarize
@@ -98,7 +97,6 @@ function submitPrompt(e) {
   // INSERT CODE SNIPPET FROM POSTMAN BELOW
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
-  myHeaders.append('Authorization', 'Bearer ' + process.env['ACCESS_TOKEN']);
 
   const raw = JSON.stringify({
     "inputs": text_to_img
