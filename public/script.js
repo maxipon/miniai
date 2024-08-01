@@ -70,7 +70,7 @@ function submitData(e) {
   // Send the text to the server using fetch API
 
   // Note - here we can omit the "baseUrl" we needed in Postman and just use a relative path to "/summarize" because we will be calling the API from our Replit!  
-  fetch("api/summarize", requestOptions)
+  fetch("/summarize", requestOptions)
     .then(response => response.text()) // Response will be summarized text
     .then(summary => {
       // Do something with the summary response from the back end API!
@@ -108,7 +108,7 @@ function submitPrompt(e) {
 
   console.log("Sending data to /txt2img:", raw);
 
-  fetch("api/txt2img", requestOptions)
+  fetch("/txt2img", requestOptions)
     .then(response => response.json()) // Expecting JSON response
     .then(data => {
       const imageUrl = data.imageUrl;
