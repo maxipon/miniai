@@ -11,7 +11,7 @@ These applications are designed to save time and effort. The AI Text Summarizer 
 ## Quick Start
 
 1. **AI Text Summarizer**: 
-   - Paste your text into the provided area.
+   - Paste your text into the provided area (between 200 and 10000 word!)
    - Click the "Submit" button to receive a concise summary.
 
 2. **Text2Img**:
@@ -20,7 +20,7 @@ These applications are designed to save time and effort. The AI Text Summarizer 
 
 ## Usage
 
-- Visit the [AI Applications website](https://miniai.vercel.app/).
+- Visit [MiniAI](https://miniai.vercel.app/).
 - Choose the desired app (AI Text Summarizer or Text2Img).
 - Follow the instructions for input and click the relevant button to perform the task.
 
