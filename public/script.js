@@ -71,15 +71,11 @@ function submitData(e) {
 
   // Note - here we can omit the "baseUrl" we needed in Postman and just use a relative path to "/summarize" because we will be calling the API from our Replit!  
   fetch("/api/summarize", requestOptions)
-    .then(response => response.text()) // Response will be summarized text
-    .then(summary => {
-      // Do something with the summary response from the back end API!
-
-      // Update the output text area with new summary
-      summarizedTextArea.value = summary;
-
-      // Stop the spinning loading animation
-      submitButton.classList.remove("submit-button--loading");
+    .then(response => response.json()) // Parse the JSON response
+    .then(data => {
+      const summary = data.summary; // Extract the summary property
+      summarizedTextArea.value = summary; // Update the output text area with the summary
+      submitButton.classList.remove("submit-button--loading"); // Stop the spinning loading animation
     })
     .catch(error => {
       console.log(error.message);
