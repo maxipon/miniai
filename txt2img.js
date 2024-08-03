@@ -1,6 +1,5 @@
 // This is the function where the call to the API is made. Returns the image as blob.
 const axios = require('axios');
-const fs = require('fs');
 
 async function txt2img(text) {
 
@@ -16,11 +15,13 @@ async function txt2img(text) {
     url: 'https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5',
     headers: { 
       'Content-Type': 'application/json', 
-      'Authorization': 'Bearer ' + process.env['ACCESS_TOKEN']
+      'Authorization': 'Bearer ' + process.env.ACCESS_TOKEN
     },
     responseType: 'arraybuffer', // Important to handle binary data
     data : data,
   };
+
+  console.log(process.env.ACCESS_TOKEN);
 
     try {
       const response = await axios.request(config);
