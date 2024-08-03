@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // Handle POST requests to the '/summarize' endpoint
-app.post('/summarize', (req, res) => {
+app.post('/api/summarize', (req, res) => {
  // get the text_to_summarize property from the request body
   const text = req.body.text_to_summarize;
 
@@ -26,7 +26,7 @@ app.post('/summarize', (req, res) => {
     });
 });
 
-app.post('/txt2img', (req, res) => {
+app.post('/api/txt2img', (req, res) => {
  // get the text_to_img property from the request body
   const text = req.body.input;
   console.log("Received data at /txt2img:", text);
